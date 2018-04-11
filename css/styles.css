@@ -1,0 +1,41 @@
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+#sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    border: 1px solid orange;
+    border-radius: 50%;
+    box-shadow: 0 0 128px red;
+    background: yellow;
+}
+
+#earth {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    border: 1px solid lightgreen;
+    border-radius: 50%;
+    background: lightblue;
+}
+
+#earth-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 650px;
+    height: 650px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+}
