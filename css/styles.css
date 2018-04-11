@@ -36,10 +36,11 @@ body {
     left: 50%;
     width: 650px;
     height: 650px;
-    border: 1px dotted white;
+    border: 0 dotted white;
     border-radius: 50%;
     margin-top: -230px;
     margin-left: -230px;
+    animation: spin-right 10s linear infinite;
 }
 
 #moon {
@@ -48,9 +49,53 @@ body {
     left: 50%;
     height: 20px;
     width: 20px;
-    margin-left: -25px;
-    margin-top: -25px;
+    margin-left: -10px;
+    margin-top: -10px;
     border: 1px solid darkgray;
     border-radius: 50%;
     background: lightgray;
+}
+
+#moon-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    border: 0 dotted white;
+    border-radius: 50%;
+    margin-top: -380px;
+    margin-left: -60px;
+    animation: spin-right 10s linear infinite;
+}
+
+.stars {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.star {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    animation: star 4s infinite;
+}
+
+@keyframes spin-right {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes star
+{
+    0% {opacity: 0.3;}
+    50% {opacity: 0.5;}
+    100% {opacity: 0.3;}
 }
