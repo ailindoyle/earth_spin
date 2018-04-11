@@ -77,8 +77,8 @@ body {
 }
 
 .star {
-    width: 2px;
-    height: 2px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background-color: white;
     position: absolute;

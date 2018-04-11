@@ -1,9 +1,9 @@
 var siteWidth = $(window).width();
-for (i = 0; i <= 1000; i++) {
-    var start = $('<div>')
+for (i = 0; i <= 100; i++) {
+    var star = $('<div>')
         .addClass('star star_'+i)
         .css({
-            top: Math.floor(Math.random()*500),
+            top: Math.floor(Math.random()*100),
             left: Math.floor(Math.random()*siteWidth)
         })
         .appendTo('.stars');
