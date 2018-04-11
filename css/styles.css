@@ -19,13 +19,15 @@ body {
 
 #earth {
     position: absolute;
-    top: 25%;
+    top: 0;
     left: 50%;
     height: 50px;
     width: 50px;
     border: 1px solid lightgreen;
     border-radius: 50%;
     background: lightblue;
+    margin-left: -25px;
+    margin-top: -25px;
 }
 
 #earth-orbit {
@@ -34,8 +36,18 @@ body {
     left: 50%;
     width: 650px;
     height: 650px;
-    border: 1px solid white;
+    border: 1px dotted white;
     border-radius: 50%;
-    margin-top: -200px;
-    margin-left: -200px;
+    margin-top: -230px;
+    margin-left: -230px;
+}
+
+#moon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: -25px;
+    margin-top: -25px;
 }
