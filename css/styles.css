@@ -5,9 +5,14 @@ body {
     background-color: black;
 }
 
+/*#solar-system {*/
+    /*transform: rotateX(25deg);*/
+    /*transform-style: preserve-3d;*/
+/*}*/
+
 #sun {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     height: 200px;
     width: 200px;
@@ -32,7 +37,7 @@ body {
 
 #earth-orbit {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     width: 650px;
     height: 650px;
@@ -76,7 +81,7 @@ body {
     display: block;
 }
 
-.star {
+.star1 {
     width: 3px;
     height: 3px;
     border-radius: 50%;
@@ -84,7 +89,18 @@ body {
     position: absolute;
     left: 40px;
     top: 40px;
-    animation: star 4s infinite;
+    animation: star1 4s infinite;
+}
+
+.star2 {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    animation: star2 4s infinite;
 }
 
 @keyframes spin-right {
@@ -93,9 +109,26 @@ body {
     }
 }
 
-@keyframes star
-{
-    0% {opacity: 0.5;}
-    50% {opacity: 1;}
-    100% {opacity: 0.5;}
+@keyframes star1 {
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes star2 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
 }
