@@ -2,13 +2,16 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-color: black;
+    background-color: #000000;
 }
 
-/*#solar-system {*/
-    /*transform: rotateX(25deg);*/
-    /*transform-style: preserve-3d;*/
-/*}*/
+#solar-system {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: rotateX(75deg);
+    transform-style: preserve-3d;
+}
 
 #sun {
     position: absolute;
@@ -16,10 +19,24 @@ body {
     left: 50%;
     height: 200px;
     width: 200px;
+    background: yellow;
     border: 1px solid orange;
     border-radius: 50%;
     box-shadow: 0 0 128px red;
-    background: yellow;
+    transform: rotateX(-75deg);
+    transform-style: preserve-3d;
+}
+
+.position-earth {
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: invert 130s infinite linear;
+}
+
+.position-moon {
+    position: absolute;
+    transform-style: preserve-3d;
+    /*animation: invert 10s infinite linear;*/
 }
 
 #earth {
@@ -33,7 +50,8 @@ body {
     background: lightblue;
     margin-left: -25px;
     margin-top: -25px;
-    /*transform-style: preserve-3d;*/
+    transform-style: preserve-3d;
+    animation: shadow 130s;
 }
 
 #earth-orbit {
@@ -42,13 +60,12 @@ body {
     left: 50%;
     width: 650px;
     height: 650px;
-    border: 1px solid white;
+    border: 0 solid white;
     border-radius: 50%;
     margin-top: -230px;
     margin-left: -230px;
-    animation: spin-right 130s linear infinite;
-    /*transform: rotateX(75deg);*/
-    /*transform-style: preserve-3d;*/
+    transform-style: preserve-3d;
+    animation: orbit 130s linear infinite;
 }
 
 #moon {
@@ -57,81 +74,57 @@ body {
     left: 50%;
     height: 20px;
     width: 20px;
-    margin-left: -10px;
-    margin-top: -10px;
-    border: 1px solid darkgray;
+    border: 0 solid darkgray;
     border-radius: 50%;
     background: lightgray;
+    transform-style: preserve-3d;
+    transform: rotateX(-90deg);
+    animation: shadow 10s;
 }
 
 #moon-orbit {
     position: absolute;
-    top: 50%;
-    left: 50%;
     width: 120px;
     height: 120px;
-    border: 0 dotted white;
+    border: 0 solid white;
     border-radius: 50%;
-    margin-top: -380px;
+    margin-top: -60px;
     margin-left: -60px;
-    animation: spin-right 10s linear infinite;
+    animation: orbit 10s linear infinite;
+    transform-style: preserve-3d;
 }
 
-.stars {
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    display: block;
+@keyframes orbit {
+    100% { transform: rotate(-360deg); }
 }
 
-.star1 {
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    left: 40px;
-    top: 40px;
-    animation: star1 4s infinite;
+@keyframes invert {
+    0%   { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+    100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); }
 }
 
-.star2 {
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    left: 40px;
-    top: 40px;
-    animation: star2 4s infinite;
-}
-
-@keyframes spin-right {
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-
-@keyframes star1 {
+@keyframes shadow {
     0% {
-        opacity: 0.3;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.3;
-    }
-}
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+        /* TOP */ }
 
-@keyframes star2 {
-    0% {
-        opacity: 1;
-    }
+    25% {
+        box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.5);
+        /* LEFT */ }
+
     50% {
-        opacity: 0.3;
-    }
+        box-shadow: inset 40px -20px 16px rgba(0, 0, 0, 0.5);
+        /* BOTTOM */ }
+
+    50.01% {
+        box-shadow: inset -40px -20px 16px rgba(0, 0, 0, 0.5);
+        /* BOTTOM */ }
+
+    75% {
+        box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.5);
+        /* RIGHT */ }
+
     100% {
-        opacity: 1;
-    }
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+        /* TOP */ }
 }
