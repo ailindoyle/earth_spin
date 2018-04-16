@@ -5,17 +5,22 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stars.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="stars.js" defer></script>
 </head>
 <body>
-    <div class="stars"></div>
+    <div class="stars">
     <div id="solar-system">
         <div id="sun"></div>
         <div id="earth-orbit">
-            <div id="earth"></div>
+            <div class="position-earth">
+                <div id="earth"></div>
+            </div>
             <div id="moon-orbit">
-                <div id="moon"></div>
+                <div class="position-moon">
+                    <div id="moon"></div>
+                </div>
             </div>
         </div>
     </div>
