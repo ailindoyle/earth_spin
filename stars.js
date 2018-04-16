@@ -1,9 +1,9 @@
 var siteWidth = $(window).width();
 var siteHeight = $(window).height();
 
-for (i = 0; i <= 100; i++) {
+for (i = 0; i <= 50; i++) {
     var star = $('<div>')
-        .addClass('star1 star1_'+i)
+        .addClass('star star1 star1_'+i)
         .css({
             top: Math.floor(Math.random()*siteHeight),
             left: Math.floor(Math.random()*siteWidth)
@@ -11,9 +11,29 @@ for (i = 0; i <= 100; i++) {
         .appendTo('.stars');
 }
 
-for (i = 0; i <= 100; i++) {
+for (i = 0; i <= 50; i++) {
     var star = $('<div>')
-        .addClass('star2 star2_'+i)
+        .addClass('star star2 star2_'+i)
+        .css({
+            top: Math.floor(Math.random()*siteHeight),
+            left: Math.floor(Math.random()*siteWidth)
+        })
+        .appendTo('.stars');
+}
+
+for (i = 0; i <= 50; i++) {
+    var star = $('<div>')
+        .addClass('star star3 star3_'+i)
+        .css({
+            top: Math.floor(Math.random()*siteHeight),
+            left: Math.floor(Math.random()*siteWidth)
+        })
+        .appendTo('.stars');
+}
+
+for (i = 0; i <= 50; i++) {
+    var star = $('<div>')
+        .addClass('star star4 star4_'+i)
         .css({
             top: Math.floor(Math.random()*siteHeight),
             left: Math.floor(Math.random()*siteWidth)
