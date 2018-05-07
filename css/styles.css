@@ -33,12 +33,6 @@ body {
     animation: invert 130s infinite linear;
 }
 
-.position-moon {
-    position: absolute;
-    transform-style: preserve-3d;
-    /*animation: invert 10s infinite linear;*/
-}
-
 #earth {
     position: absolute;
     top: 0;
@@ -47,7 +41,7 @@ body {
     width: 50px;
     border: 1px solid lightgreen;
     border-radius: 50%;
-    background: lightblue;
+    background-image: url("../images/earth-image.png");
     margin-left: -25px;
     margin-top: -25px;
     transform-style: preserve-3d;
@@ -66,32 +60,6 @@ body {
     margin-left: -230px;
     transform-style: preserve-3d;
     animation: orbit 130s linear infinite;
-}
-
-#moon {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 20px;
-    width: 20px;
-    border: 0 solid darkgray;
-    border-radius: 50%;
-    background: lightgray;
-    transform-style: preserve-3d;
-    transform: rotateX(-90deg);
-    animation: shadow 10s;
-}
-
-#moon-orbit {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border: 0 solid white;
-    border-radius: 50%;
-    margin-top: -60px;
-    margin-left: -60px;
-    animation: orbit 10s linear infinite;
-    transform-style: preserve-3d;
 }
 
 @keyframes orbit {
