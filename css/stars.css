@@ -16,30 +16,30 @@
 }
 
 .star1 {
-    animation: star1 7s infinite;
+    animation: star1 5s infinite;
 }
 
 .star2 {
-    animation: star2 11s infinite;
+    animation: star2 10s infinite;
 }
 
 .star3 {
-    animation: star3 13s infinite;
+    animation: star3 5s infinite;
 }
 
 .star4 {
-    animation: star4 20s infinite;
+    animation: star4 10s infinite;
 }
 
 @keyframes star1 {
     0% {
-        opacity: 0.3;
+        opacity: 0.2;
     }
     50% {
         opacity: 0.9;
     }
     100% {
-        opacity: 0.3;
+        opacity: 0.2;
     }
 }
 
@@ -48,7 +48,7 @@
         opacity: 0.9;
     }
     50% {
-        opacity: 0.3;
+        opacity: 0.2;
     }
     100% {
         opacity: 0.9;
@@ -57,24 +57,24 @@
 
 @keyframes star3 {
     0% {
-        opacity: 0.7;
+        opacity: 0.9;
     }
     50% {
-        opacity: 0.1;
+        opacity: 0.2;
     }
     100% {
-        opacity: 0.7;
+        opacity: 0.9;
     }
 }
 
 @keyframes star4 {
     0% {
-        opacity: 0.1;
+        opacity: 0.2;
     }
     50% {
-        opacity: 0.7;
+        opacity: 0.9;
     }
     100% {
-        opacity: 0.1;
+        opacity: 0.2;
     }
 }

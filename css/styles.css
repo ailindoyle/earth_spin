@@ -8,7 +8,7 @@ body {
 #solar-system {
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 45%;
     transform: rotateX(75deg);
     transform-style: preserve-3d;
 }
@@ -39,9 +39,9 @@ body {
     left: 50%;
     height: 50px;
     width: 50px;
-    border: 1px solid lightgreen;
+    border: 1px solid navy;
     border-radius: 50%;
-    background-image: url("../images/earth-image.png");
+    background-color: blue;
     margin-left: -25px;
     margin-top: -25px;
     transform-style: preserve-3d;
@@ -63,36 +63,37 @@ body {
 }
 
 @keyframes orbit {
-    100% { transform: rotate(-360deg); }
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 @keyframes invert {
-    0%   { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
-    100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); }
+    0% {
+        transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+    }
 }
 
 @keyframes shadow {
     0% {
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
-        /* TOP */ }
-
+    }
     25% {
         box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.5);
-        /* LEFT */ }
-
+    }
     50% {
         box-shadow: inset 40px -20px 16px rgba(0, 0, 0, 0.5);
-        /* BOTTOM */ }
-
+    }
     50.01% {
         box-shadow: inset -40px -20px 16px rgba(0, 0, 0, 0.5);
-        /* BOTTOM */ }
-
+    }
     75% {
         box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.5);
-        /* RIGHT */ }
-
+    }
     100% {
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
-        /* TOP */ }
+    }
 }
